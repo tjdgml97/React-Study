@@ -9,6 +9,7 @@ import Inline from './components/inline';
 import EventHandler from './components/EventHandler';
 import Example from './components/Example';
 import State from './components/State';
+import State2 from './components/State2';
 
 function App() {
   const str= "hello, jsx world";
@@ -20,6 +21,7 @@ function App() {
   return (
     <div className="App">
     <Example/>
+    <State2/>
     <State/>
       {/* <EventHandler/>
       <Inline/> */}
