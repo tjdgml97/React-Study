@@ -36,17 +36,21 @@ import PracticeTwo from './components/PracticeTwo';
 // import ConditionalState from './components/ConditionalState';
 
 function App() {
-  const [condition, setCondition] = useState(true);
+  const [condition, setCondition] = useState('1번');
 
   const onChange = () => {
-    setCondition(!condition);
-    // condition == '1번' ? setCondition('2번') : setCondition('1번');
+    // setCondition(!condition);
+    condition == '1번' ? setCondition('2번') : setCondition('1번');
   };
 
   return (
     <div className="App">
-      {condition ? <PracticeOne /> : <PracticeTwo />}
-      <button onClick={onChange}>click</button>
+      {condition === '1번' ? (
+        <PracticeOne text={condition} />
+      ) : (
+        <PracticeTwo text={condition} />
+      )}
+      <button onClick={onChange}>{condition}</button>
     </div>
   );
 }
